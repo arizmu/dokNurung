@@ -1,0 +1,97 @@
+<div>
+    <?php $__env->startPush('styles'); ?>
+        <?php if (isset($component)) { $__componentOriginala41b4183d82cfdff88d65e7ee6cae852312656e4 = $component; } ?>
+<?php $component = $__env->getContainer()->make(App\View\Components\Head\Tinymce::class, [] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('head.tinymce'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $constructor = (new ReflectionClass(App\View\Components\Head\Tinymce::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes([]); ?> <?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginala41b4183d82cfdff88d65e7ee6cae852312656e4)): ?>
+<?php $component = $__componentOriginala41b4183d82cfdff88d65e7ee6cae852312656e4; ?>
+<?php unset($__componentOriginala41b4183d82cfdff88d65e7ee6cae852312656e4); ?>
+<?php endif; ?>
+    <?php $__env->stopPush(); ?>
+
+
+    <div class="row column_title">
+        <div class="col-md-12">
+            <div class="page_title">
+                <h2>Edukasi Form</h2>
+            </div>
+        </div>
+    </div>
+    <form method="POST" action="<?php echo e(route('edukasi.store')); ?>" enctype="multipart/form-data">
+        <?php echo csrf_field(); ?>
+        <div class="card">
+            <div class="card-header">
+                <?php if (isset($component)) { $__componentOriginal2d3054491160b5bc178f52d0506862417e45bea7 = $component; } ?>
+<?php $component = $__env->getContainer()->make(App\View\Components\Form\Input::class, ['title' => 'Judul','name' => 'title','type' => 'text','value' => '','status' => 'false'] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('form.input'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $constructor = (new ReflectionClass(App\View\Components\Form\Input::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes([]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal2d3054491160b5bc178f52d0506862417e45bea7)): ?>
+<?php $component = $__componentOriginal2d3054491160b5bc178f52d0506862417e45bea7; ?>
+<?php unset($__componentOriginal2d3054491160b5bc178f52d0506862417e45bea7); ?>
+<?php endif; ?>
+
+                <label for="">Gambar</label>
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-outline-primary">
+                            <i class="fa fa-picture-o text-danger"></i> <span class="text-danger ml-2">Choose</span>
+                        </a>
+                    </span>
+                    <input id="thumbnail" class="form-control ml-2" type="text" name="images">
+                </div>
+                <img id="holder" style="margin-top:15px;max-height:100px;">
+            </div>
+            <div class="card-body">
+                <?php if (isset($component)) { $__componentOriginaldb00d5d4a74952847bec77ec69993e9b9be37ab7 = $component; } ?>
+<?php $component = $__env->getContainer()->make(App\View\Components\Form\Txteditor::class, ['value' => ''] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('form.txteditor'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $constructor = (new ReflectionClass(App\View\Components\Form\Txteditor::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes([]); ?> <?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginaldb00d5d4a74952847bec77ec69993e9b9be37ab7)): ?>
+<?php $component = $__componentOriginaldb00d5d4a74952847bec77ec69993e9b9be37ab7; ?>
+<?php unset($__componentOriginaldb00d5d4a74952847bec77ec69993e9b9be37ab7); ?>
+<?php endif; ?>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-primary" type="submit">Submit</button>
+                <button class="btn btn-warning" type="reset">Rest</button>
+            </div>
+        </div>
+    </form>
+    <?php $__env->startPush('script'); ?>
+        <?php if (isset($component)) { $__componentOriginal8d59145c86a2cc8c686bcdf40cda977b7b4d9437 = $component; } ?>
+<?php $component = $__env->getContainer()->make(App\View\Components\Head\InputImage::class, [] + (isset($attributes) ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('head.input-image'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $constructor = (new ReflectionClass(App\View\Components\Head\InputImage::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes([]); ?> <?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal8d59145c86a2cc8c686bcdf40cda977b7b4d9437)): ?>
+<?php $component = $__componentOriginal8d59145c86a2cc8c686bcdf40cda977b7b4d9437; ?>
+<?php unset($__componentOriginal8d59145c86a2cc8c686bcdf40cda977b7b4d9437); ?>
+<?php endif; ?>
+    <?php $__env->stopPush(); ?>
+</div>
+<?php /**PATH C:\laragon\www\pro-naira\resources\views/livewire/edukasi/create-edukasi.blade.php ENDPATH**/ ?>
